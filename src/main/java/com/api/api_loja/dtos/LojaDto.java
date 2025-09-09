@@ -10,7 +10,7 @@ public class LojaDto {
     @NotBlank(message = "O nome é obrigatório")
     private String nome;
     private String descricao;
-    @NotNull(message = "O preço é obrigatório")
-    @Min(value = 1, message = "O preço deve ser maior a zero")
-    private double preco;
+    private String cnpj;
+    private String endereco;
+    private String telefone;
 }

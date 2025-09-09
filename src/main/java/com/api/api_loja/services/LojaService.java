@@ -19,7 +19,9 @@ public class LojaService {
         LojaModel loja = new LojaModel();
         loja.setNome(dto.getNome());
         loja.setDescricao(dto.getDescricao());
-        loja.setPreco(dto.getPreco());
+        loja.setCnpj(dto.getCnpj());
+        loja.setEndereco(dto.getEndereco());
+        loja.setTelefone(dto.getTelefone());
         return lojaRepository.save(loja);
     }
 
@@ -32,7 +34,9 @@ public class LojaService {
                 new RuntimeException("Loja  não encontrado"));
         existente.setNome(dto.getNome());
         existente.setDescricao(dto.getDescricao());
-        existente.setPreco(dto.getPreco());
+        existente.setCnpj(dto.getCnpj());
+        existente.setEndereco(dto.getEndereco());
+        existente.setTelefone(dto.getTelefone());
         return lojaRepository.save(existente);
     }
 
